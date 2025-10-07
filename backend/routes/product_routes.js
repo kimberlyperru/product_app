@@ -24,4 +24,8 @@ router.post('/', async (req, res) => {
     } catch (error) {
         //if there is an error, send a 500 status code and the error message
         res.status(500).json({ message: error.message });
-    }   
+    }
+});
+
+// export the router so server.js can use it
+module.exports = router;
