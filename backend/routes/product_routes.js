@@ -9,12 +9,12 @@ const router = express.Router();
 const Product = require('../models/product_model');
 
 //create a new product
-//when someone sends a POST request to "/" like http://localhost:5000/api/products/ 
+//when someone sends a POST request to "/" like http://localhost:5000/product_app/products/ 
 //this code will run
 router.post('/', async (req, res) => {
     try {
         //request body contains the data sent by the client to create a new product like name, price etc.
-        const product = new product (req.body); //create a new product instance using the data from the request body
+        const product = new Product (req.body); //create a new product instance using the data from the request body
 
         //save the product to MongoDB 
         const savedProduct = await product.save();
