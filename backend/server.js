@@ -30,6 +30,10 @@ const productRoutes = require('./routes/product_routes');
 //    POST http://localhost:5000/product_app/products create a new product
 app.use('/product_app/products', productRoutes);
 
+//user routes
+const userRoutes = require('./routes/user_routes');
+app.use('/product_app/users', userRoutes);
+
 //start the server  
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
